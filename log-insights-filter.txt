@@ -1,0 +1,2 @@
+filter @message like /(?i)(Init Duration)/
+| stats max(@initDuration) as MaxInitDuration, max(@duration) as MaxDuration, avg(@maxMemoryUsed)/1000 as MaximumMemoryUsedKb, avg(@memorySize)/1000 as ProvisionedMemoryKb, (avg(@memorySize) - avg(@maxMemoryUsed))/1000 as OverProvisionedMemoryKb
