@@ -56,7 +56,7 @@ Metrics were collected from the Lambda functions and displayed on a [Cloudwatch]
 4. Memory usage information.
 
 The **number** widget for metrics 1 and 2 was configured for each function like the image:
-![](C:\Users\Gabriel\Documents\GitHub\cec-lambda-spring-quarkus-node-benchmark\assets\Cloudwatch-setup.JPG)
+![](.\assets\Cloudwatch-setup.JPG)
 
 The **logs** widget for metrics 3 and 4 was configured using a log insights filter. Go to the log
 insights page on Cloudwatch, select the function log group, add the filter string and click `Add to dashboard`:
@@ -82,7 +82,7 @@ memory consumption with a maximum of 157.4 MB used against 190.5 MB on Spring. T
 figure below presents the metrics for the Quarkus and Spring functions:
 
 (Spring has 199 invocations because 1 failed since I exceeded the allowed API request rate...)
-![](C:\Users\Gabriel\Documents\GitHub\cec-lambda-spring-quarkus-node-benchmark\assets\Results-spring-quarkus.JPG)
+![](.\assets\Results-spring-quarkus.JPG)
 
 I want to use the Lambda functions as the backend of a web application. For this reason, 
 cold starts that take over 1 second are not ideal. Even though this scenario still
@@ -100,7 +100,7 @@ done with very little effort from the AWS console.
 
 NodeJS was better than the Java frameworks in every metric. It runs with less memory and
 cold starts in less than half a second.
-![](C:\Users\Gabriel\Documents\GitHub\cec-lambda-spring-quarkus-node-benchmark\assets\Results-nodejs.JPG)
+![](.\assets\Results-nodejs.JPG)
 
 # Conclusion
 
